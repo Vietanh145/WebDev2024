@@ -17,3 +17,17 @@ const filterCards = (e) => {
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
+
+document.getElementById('search').addEventListener('input', function() {
+    let input = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        let description = card.querySelector('p').textContent.toLowerCase();
+        if (description.includes(input)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});

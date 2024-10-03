@@ -1,145 +1,287 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-img{
+body {
+    font-family: Arial, sans-serif;
+}
+
+img {
     width: 100%;
-    height: 100%;
-    margin: 8px;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Header CSS */
-#icon{
+#icon {
     width: 100px;
     height: 50px;
 }
 
-.header{
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px 8px 20px;
+    align-items: center;
+    padding: 10px 20px;
     position: fixed;
     z-index: 1;
-    border-bottom: 1px;
-    box-shadow: 0 2px 3px 0 #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     background-color: white;
+    flex-wrap: wrap;
 }
 
-.tag_header{
+.tag_header {
     display: flex;
-    width: fit-content;
     align-items: center;
-    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
-.Home, .Image, .Tool, .Temp, .PSD, .More {
-    padding: 0px 15px;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    padding: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ec2227;
+}
+
+.search_header {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+#search {
     width: 100%;
-}
-
-.search_header{
-    width: 100%;
-}
-
-#search{
-    width: 95%;
-    height: 60%;
     padding: 10px;
-    border: none;
-    background-color: #e7e7e7;
-    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.profile_header{
+.profile_header {
     display: flex;
-    width: 10%;
-    justify-content: space-between;
     align-items: center;
-}
-
-.profile_header .noti, .ava{
-    padding: 0px, 5px;
 }
 
 /* Body */
-.body{
-    height: 2000px; 
-    width: 100%;
-    padding-top: 100px;  
-    margin: auto;
+.body {
+    padding-top: 100px;
 }
+
 /* Filter CSS */
-.filter-buttons{
-    margin: 0px 10px;
-    height: fit-content;
-    padding: 0px 0px 10px 0px ;
+.filter-buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .filter-buttons button {
     background: #2a3c95;
-    border-color: transparent;
-    padding: 8px;
-    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     color: white;
-    margin-bottom: 3px;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 120px;
 }
-  
+
 .filter-buttons button:hover {
     background: #ec2227;
-    color: white;
 }
-  
+
 .filter-buttons button.active {
-    color: white;
     background: #ec2227;
 }
 
 /* Image CSS */
-.filterable-cards{
+.filterable-cards {
     display: flex;
-    margin: 0px 10px;
-    width: 100%;;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20     px;
 }
+
+.filterable-cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.filterable-cards .card p {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
 .filterable-cards .card {
     width: 250px;
-    height: fit-content;
-    border: 2px solid transparent;
-    margin: 5px 10px 5px 0px;
+    margin: 10px;
+    transition: transform 0.2s;
+    text-align: center;
 }
-  
+
+
+.filterable-cards .card:hover {
+    transform: scale(1.05);
+}
+
 .filterable-cards .card.hide {
     display: none;
 }
-  
+
 /* Row CSS */
-.row{
+.row {
     display: flex;
-    flex-direction: column;
-    margin: 0px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* Footer */
-/* .footer{
+.footer {
+    background-color: #2a3c95;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
     text-align: center;
-    padding: 12px ;
-    background-color: white;
 }
-.foot-item{
-    display: flex;    
-    justify-content: center;
+
+.footer-section {
+    flex: 1;
+    padding: 0 10px;
 }
-.foot-text p{
-    display: block;
-    padding: 10px 0px;
-    color: #bcbcbc;
-    font-family:"Lato", sans-serif ;
+
+.footer-section h4 {
+    margin-bottom: 10px;
 }
-.foot-item i{
-    color: #bcbcbc;
-    font-size: 24px;
-    width: 24px;
-    margin: 0px 3px;
-} */
+
+.social-icon {
+    margin-right: 10px;
+    color: white;
+}
+
+.social-icon:hover {
+    color: #ec2227;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .tag_header {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        padding: 5px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .search_header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .filter-buttons button {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .filterable-cards .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 15px;
+    }
+
+    .profile_header {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .nav-item {
+        padding: 5px;
+    }
+
+    #search {
+        margin-top: 10px;
+    }
+
+    nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        flex: 1 100%;
+    }
+
+    .filter-buttons {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .filter-buttons button {
+        width: 100%;
+    }
+}
