@@ -7,39 +7,43 @@
     <title>Photo Gallery</title>
     <!-- CSS link -->
     <link rel="stylesheet" href="./photo.css">
-    <!-- Font Awsome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
     <!-- Header -->
     <div class="header">
         <div class="tag_header">
-            <img id="icon"
-                 src="https://cdn.haitrieu.com/wp-content/uploads/2022/11/Logo-Truong-Dai-hoc-Khoa-hoc-va-Cong-nghe-Ha-Noi-VN-France-University.png"
-                 alt="Logo">
-            <nav>
-                <div class="nav-item">Home</div>
-                <div class="nav-item">Image</div>
-                <div class="nav-item">Tool</div>
-                <div class="nav-item">Template</div>
-                <div class="nav-item">PSD</div>
-                <div class="nav-item">More</div>
-            </nav>
+            <div class="icon">
+                <img id="icon" src="https://usth.edu.vn/wp-content/uploads/2021/11/logo.png" alt="">
+            </div>
+            <div class="Home">Home</div>
+            <div class="Create">Create</div>
+
         </div>
+
         <div class="search_header">
-            <label for="search"></label>
             <input id="search" type="text" placeholder="Search for photo">
         </div>
+
         <div class="profile_header">
-            <div class="notification" style="margin-right: 20px">
+            <div class="noti">
                 <i class="fa-regular fa-bell"></i>
             </div>
+
+            <div class="chat">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+
             <div class="ava">
                 <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="more">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </div>
@@ -60,6 +64,8 @@
             <button data-filter="motorbike">Motorbikes</button>
             <button data-filter="glasses">Glasses</button>
             <button data-filter="paint">Paintings</button>
+            <button data-filter="dog">Dogs</button>
+            <button data-filter="cat">Cats</button>
         </div>
 
         <!-- Filterable Images / Cards Section -->
@@ -115,6 +121,11 @@
                     <p>MLB shoes</p>
                 </div>
 
+                <div class="card" data-name="cat">
+                    <img src="image/cat-1.jpg" alt="Cats 1">
+                    <p>Cute cat</p>
+                </div>
+
                 <div class="card" data-name="phone">
                     <img src="image/phone-2.jpg" alt="Phone 2">
                     <p>Iphone 6s</p>
@@ -123,6 +134,11 @@
                 <div class="card" data-name="watch">
                     <img src="image/watch-2.jpg" alt="Watch 2">
                     <p>Richard Mille</p>
+                </div>
+
+                <div class="card" data-name="cat">
+                    <img src="image/cat-2.jpg" alt="Cats 2">
+                    <p>Hello kittens</p>
                 </div>
 
                 <div class="card" data-name="cloth">
@@ -148,6 +164,11 @@
                 <div class="card" data-name="earphone">
                     <img src="image/earphone-3.jpg" alt="Earphone 3">
                     <p>Pink AirMax</p>
+                </div>
+
+                <div class="card" data-name="cat">
+                    <img src="image/cat-3.jpg" alt="Cats 3">
+                    <p>Cute kitten</p>
                 </div>
 
                 <div class="card" data-name="shoe">
@@ -190,9 +211,19 @@
                     <p>Blue AirMax</p>
                 </div>
 
+                <div class="card" data-name="cat">
+                    <img src="image/cat-4.jpg" alt="Cats 4">
+                    <p>Angry cat</p>
+                </div>
+
                 <div class="card" data-name="shoe">
                     <img src="image/shoe-4.jpg" alt="Shoes 4">
                     <p>Nice shoes</p>
+                </div>
+
+                <div class="card" data-name="dog">
+                    <img src="image/dog-4.jpg" alt="Dogs 4">
+                    <p>Cute puppy</p>
                 </div>
 
                 <div class="card" data-name="phone">
@@ -220,9 +251,19 @@
                     <p>Round glasses</p>
                 </div>
 
+                <div class="card" data-name="dog">
+                    <img src="image/dog-3.jpg" alt="Dogs 3">
+                    <p>Corgi</p>
+                </div>
+
                 <div class="card" data-name="paint">
                     <img src="image/paint-4.jpg" alt="Paint 4">
                     <p>Lofi girl</p>
+                </div>
+
+                <div class="card" data-name="dog">
+                    <img src="image/dog-5.jpg" alt="Dogs 5">
+                    <p>Cute smiling dog</p>
                 </div>
 
                 <div class="card" data-name="earphone">
@@ -235,6 +276,11 @@
                     <p>Nike low</p>
                 </div>
 
+                <div class="card" data-name="dog">
+                    <img src="image/dog-1.jpg" alt="Dogs 1">
+                    <p>Cute dog</p>
+                </div>
+
                 <div class="card" data-name="phone">
                     <img src="image/phone-5.jpg" alt="Phone 5">
                     <p>ROG phone</p>
@@ -245,9 +291,19 @@
                     <p>White Cartier</p>
                 </div>
 
+                <div class="card" data-name="cat">
+                    <img src="image/cat-5.jpg" alt="Cats 5">
+                    <p>Kitten</p>
+                </div>
+
                 <div class="card" data-name="cloth">
                     <img src="image/cloth-5.jpg" alt="Clothes 5">
                     <p>Green T-shirt</p>
+                </div>
+
+                <div class="card" data-name="dog">
+                    <img src="image/dog-2.jpg" alt="Dogs 1">
+                    <p>Drawing dog  </p>
                 </div>
 
                 <div class="card" data-name="motorbike">
@@ -268,20 +324,25 @@
         </div>
     </div>    
 
+        <!-- Footer -->
+        <div class="footer">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-snapchat"></i></a>
+                </div>
+            </div>
+    
+            <div class="f-text">
+                <p>© 2024 Photo Gallery</p>
+            </div>
+        </div>
 
     <!-- JavaScript script -->
     <script src="./photo.js"></script>

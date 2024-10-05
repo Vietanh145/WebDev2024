@@ -18,6 +18,9 @@ const filterCards = (e) => {
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
+
+
+
 document.getElementById('search').addEventListener('input', function() {
     let input = this.value.toLowerCase();
     let cards = document.querySelectorAll('.card');
