@@ -183,6 +183,49 @@ body {
     display: none;
 }
 
+/* Menu CSS */
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 10;
+    transform: scale(0); 
+    transform-origin: top right;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.menu.menu-active {
+    transform: scale(1); 
+}
+    
 /* Row CSS */
 .row {
     display: flex;

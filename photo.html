@@ -48,7 +48,17 @@
         </div>
     </div>
 
-
+        <!-- Menu (ẩn ban đầu) -->
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notification</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    
     <!-- Body -->
     <div class="body">
 
@@ -344,8 +354,17 @@
             </div>
         </div>
 
-    <!-- JavaScript script -->
+    <!-- JavaScript -->
     <script src="./photo.js"></script>
+    <script>
+        const menu = document.getElementById('menu');
+        const menuIcon = document.querySelector('.fa-bars');
+
+        menuIcon.addEventListener('click', function () {
+            // Toggle class to trigger animation
+            menu.classList.toggle('menu-active');
+        });
+    </script>
 </body>
 
 </html>
