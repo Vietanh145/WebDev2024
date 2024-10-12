@@ -18,6 +18,9 @@ img {
     height: auto;
 }
 
+p{
+    margin: 10px 0px;
+}
 /* Header CSS */
 #icon {
     width: 80px;
